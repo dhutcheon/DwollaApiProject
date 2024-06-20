@@ -1,31 +1,30 @@
 using Microsoft.AspNetCore.Mvc;
 using TimeApi.Services;
 
-namespace TimeApi.Controllers
+namespace TimeApi.Controllers;
+
+[ApiController]
+[Route("api/time")]
+public class TimeController : ControllerBase
 {
-    [ApiController]
-    [Route("api/time")]
-    public class TimeController : ControllerBase
+    private readonly ITimeService _timeService;
+
+    public TimeController(ITimeService timeService)
     {
-        private readonly ITimeService _timeService;
+        _timeService = timeService;
+    }
 
-        public TimeController(ITimeService timeService)
+    [HttpGet]
+    public IActionResult GetTime([FromQuery] string? timeZone = null)
+    {
+        try
         {
-            _timeService = timeService;
+            var response = _timeService.GetTime(timeZone);
+            return Ok(response);
         }
-
-        [HttpGet]
-        public IActionResult GetTime([FromQuery] string? timeZone = null)
+        catch (ArgumentException ex)
         {
-            try
-            {
-                var response = _timeService.GetTime(timeZone);
-                return Ok(response);
-            }
-            catch (ArgumentException ex)
-            {
-                return BadRequest(new { Error = ex.Message });
-            }
+            return BadRequest(new { Error = ex.Message });
         }
     }
 }
