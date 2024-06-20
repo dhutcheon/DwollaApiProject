@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeApi", "TimeApi\TimeApi.csproj", "{83D59D5E-0B10-4FD5-B35A-30DB9144DB44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeApi.Tests", "TimeApi.Tests\TimeApi.Tests.csproj", "{030D1106-8E72-488B-8948-938CD103243A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83D59D5E-0B10-4FD5-B35A-30DB9144DB44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83D59D5E-0B10-4FD5-B35A-30DB9144DB44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83D59D5E-0B10-4FD5-B35A-30DB9144DB44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83D59D5E-0B10-4FD5-B35A-30DB9144DB44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{030D1106-8E72-488B-8948-938CD103243A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{030D1106-8E72-488B-8948-938CD103243A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{030D1106-8E72-488B-8948-938CD103243A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{030D1106-8E72-488B-8948-938CD103243A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

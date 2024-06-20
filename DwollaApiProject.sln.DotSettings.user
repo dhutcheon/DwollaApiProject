@@ -1,0 +1,12 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a4df2bac_002De009_002D4331_002Db0b4_002Db6c545808248/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GetTime_WithInvalidTimeZone_ShouldReturnBadRequest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::030D1106-8E72-488B-8948-938CD103243A::net8.0::TimeApi.Tests.TimeControllerTests.GetTime_WithInvalidTimeZone_ShouldReturnBadRequest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b73279b3_002D5a32_002D42cc_002Db685_002Deb9ef2d9a777/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TimeServiceTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::030D1106-8E72-488B-8948-938CD103243A::net8.0::TimeApi.Tests.TimeServiceTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::030D1106-8E72-488B-8948-938CD103243A::net8.0::TimeApi.Tests.TimeControllerTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
