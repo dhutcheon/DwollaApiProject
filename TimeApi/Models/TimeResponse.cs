@@ -2,6 +2,6 @@ namespace TimeApi.Models;
 
 public class TimeResponse
 {
-    public string? CurrentTime { get; set; }
-    public string? AdjustedTime { get; set; }
+    public string? currentTime { get; set; }
+    public string? adjustedTime { get; set; }
 }

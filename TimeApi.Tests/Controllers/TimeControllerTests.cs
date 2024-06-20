@@ -22,8 +22,8 @@ public class TimeControllerTests
     {
         var expectedResponse = new TimeResponse
         {
-            CurrentTime = "2050-01-24T15:06:26Z",
-            AdjustedTime = "2050-01-24T07:06:26-08:00"
+            currentTime = "2050-01-24T15:06:26Z",
+            adjustedTime = "2050-01-24T07:06:26-08:00"
         };
 
         _timeServiceMock.Setup(s => s.GetTime(null)).Returns(expectedResponse);
@@ -32,8 +32,8 @@ public class TimeControllerTests
 
         var okResult = Assert.IsType<OkObjectResult>(result);
         var returnValue = Assert.IsType<TimeResponse>(okResult.Value);
-        Assert.Equal(expectedResponse.CurrentTime, returnValue.CurrentTime);
-        Assert.Equal(expectedResponse.AdjustedTime, returnValue.AdjustedTime);
+        Assert.Equal(expectedResponse.currentTime, returnValue.currentTime);
+        Assert.Equal(expectedResponse.adjustedTime, returnValue.adjustedTime);
     }
 
     [Fact]
@@ -42,8 +42,8 @@ public class TimeControllerTests
         var timeZone = "Pacific Standard Time";
         var expectedResponse = new TimeResponse
         {
-            CurrentTime = "2050-01-24T15:06:26Z",
-            AdjustedTime = "2050-01-24T07:06:26-08:00"
+            currentTime = "2050-01-24T15:06:26Z",
+            adjustedTime = "2050-01-24T07:06:26-08:00"
         };
 
         _timeServiceMock.Setup(s => s.GetTime(timeZone)).Returns(expectedResponse);
@@ -52,8 +52,8 @@ public class TimeControllerTests
 
         var okResult = Assert.IsType<OkObjectResult>(result);
         var returnValue = Assert.IsType<TimeResponse>(okResult.Value);
-        Assert.Equal(expectedResponse.CurrentTime, returnValue.CurrentTime);
-        Assert.Equal(expectedResponse.AdjustedTime, returnValue.AdjustedTime);
+        Assert.Equal(expectedResponse.currentTime, returnValue.currentTime);
+        Assert.Equal(expectedResponse.adjustedTime, returnValue.adjustedTime);
     }
 
     [Fact]

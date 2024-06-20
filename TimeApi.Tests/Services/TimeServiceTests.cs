@@ -14,10 +14,10 @@ public class TimeServiceTests
         var result = _timeService.GetTime();
 
         Assert.NotNull(result);
-        Assert.NotNull(result.CurrentTime);
-        Assert.EndsWith("Z", result.CurrentTime);
-        Assert.Equal(currentTime, result.CurrentTime);
-        Assert.Null(result.AdjustedTime);
+        Assert.NotNull(result.currentTime);
+        Assert.EndsWith("Z", result.currentTime);
+        Assert.Equal(currentTime, result.currentTime);
+        Assert.Null(result.adjustedTime);
     }
 
     [Fact]
@@ -34,9 +34,9 @@ public class TimeServiceTests
         var result = _timeService.GetTime(timeZoneId);
 
         Assert.NotNull(result);
-        Assert.NotNull(result.CurrentTime);
-        Assert.NotNull(result.AdjustedTime);
+        Assert.NotNull(result.currentTime);
+        Assert.NotNull(result.adjustedTime);
         Assert.False(adjustedTime.EndsWith("Z"));
-        Assert.Equal(adjustedTime, result.AdjustedTime);
+        Assert.Equal(adjustedTime, result.adjustedTime);
     }
 }

@@ -15,11 +15,13 @@ public class TimeController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult GetTime([FromQuery] string? timeZone = null)
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public IActionResult GetTime([FromQuery] string? timezone = null)
     {
         try
         {
-            var response = _timeService.GetTime(timeZone);
+            var response = _timeService.GetTime(timezone);
             return Ok(response);
         }
         catch (ArgumentException ex)
